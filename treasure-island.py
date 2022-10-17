@@ -21,3 +21,14 @@ print('''
     *******************************************************************************
 ''')
 
+print("Welcome to Treasure Island. Your mission is to find the treasure.\n")
+
+right_or_left = input("Where do you want to go? Right or left? ").lower()
+
+if right_or_left == "right" :
+    print("Fall into a hole. Game Over.")
+elif right_or_left ==  "left" :
+    print("You are in a swamp.")
+
+else :
+    print("Please, enter a correct command and try again.")
