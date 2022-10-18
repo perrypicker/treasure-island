@@ -25,10 +25,27 @@ print("Welcome to Treasure Island. Your mission is to find the treasure.\n")
 
 right_or_left = input("Where do you want to go? Right or left? ").lower()
 
-if right_or_left == "right" :
-    print("Fall into a hole. Game Over.")
-elif right_or_left ==  "left" :
-    print("You are in a swamp.")
+
+if right_or_left == "left" :
+    river = input("You found a river. What do you want to do? Swim or wait? ").lower()
+    
+    if river == "wait" :
+        doors = input("You are looking three doors. Red, blue and yellow. Which do you choose? ").lower()
+
+        if doors == "red" :
+            print("Burned by ffire. Game Over.")
+
+        elif doors == "blue" :
+            print("Eaten by beast. Game Over.")
+
+        elif doors == "yellow" :
+            print("You win!")
+
+        else :
+            print("You are dead because you do not know how to follow instructions. Game Over.")
+    
+    else :
+        print("You have been attacked by a trout. Game Over.")
 
 else :
-    print("Please, enter a correct command and try again.")
+    print("You fall into a hole. Game Over.")
